@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>TidalCycles</id>
+    <version>0.9.4</version>
+    <packageSourceUrl>https://github.com/tidalcycles/tidal-chocolatey</packageSourceUrl>
+    <title>TidalCycles</title>
+    <authors>Mike Hodnick</authors>
+    <projectUrl>https://tidalcycles.org</projectUrl>
+    <iconUrl>https://tidalcycles.org/favicon/favicon-96x96.png</iconUrl>
+    <licenseUrl>https://www.gnu.org/licenses/gpl-3.0.en.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/tidalcycles/tidal</projectSourceUrl>
+    <docsUrl>http://tidalcycles.org/</docsUrl>
+    <bugTrackerUrl>https://github.com/tidalcycles/tidal/issues</bugTrackerUrl>
+    <tags>tidal tidalcycles livecoding admin audio</tags>
+    <summary>TidalCycles install for Windows.</summary>
+    <description>TidalCycles (or Tidal for short) is a language for live coding patterns.
+    It allows you to make musical patterns with text, describing sequences and ways of 
+    transforming and combining them, exploring complex interactions between simple parts.
+
+    Tidal allows you to express music with very flexible timing, providing a little language 
+    for describing patterns as step sequences (which can be polyphonic and polymetric), 
+    some generators of continuous patterns (e.g. sinewaves, sawtooths) and a wide range 
+    of pattern transformations.
+
+    Tidal is highly composable in that pattern transformations can be easily combined together, 
+    allowing you to quickly create complex patterns from simple ingredients.
+
+    Tidal does not make sound itself, but is designed for use with the SuperDirt synth, 
+    and can control other synths over Open Sound Control or MIDI.
+    </description>
+  <dependencies>
+    <dependency id="Atom"/>
+    <dependency id="supercollider"/>
+    <dependency id="sc3plugins"/>
+    <dependency id="haskell-stack"/>
+  </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
