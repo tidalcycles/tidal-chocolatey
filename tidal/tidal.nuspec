@@ -4,7 +4,7 @@
     <id>TidalCycles</id>
     <version>0.9.4</version>
     <packageSourceUrl>https://github.com/tidalcycles/tidal-chocolatey</packageSourceUrl>
-    <title>TidalCycles</title>
+    <title>TidalCycles for Windows</title>
     <authors>Mike Hodnick</authors>
     <projectUrl>https://tidalcycles.org</projectUrl>
     <iconUrl>https://tidalcycles.org/favicon/favicon-96x96.png</iconUrl>
@@ -13,8 +13,9 @@
     <projectSourceUrl>https://github.com/tidalcycles/tidal</projectSourceUrl>
     <docsUrl>http://tidalcycles.org/</docsUrl>
     <bugTrackerUrl>https://github.com/tidalcycles/tidal/issues</bugTrackerUrl>
+    <releaseNotes>https://github.com/tidalcycles/tidal-chocolatey/blob/master/tidal/changelog.md</releaseNotes>
     <tags>tidal tidalcycles livecoding admin audio</tags>
-    <summary>TidalCycles install for Windows.</summary>
+    <summary>TidalCycles install for Windows.</summary>    
     <description>TidalCycles (or Tidal for short) is a language for live coding patterns.
     It allows you to make musical patterns with text, describing sequences and ways of 
     transforming and combining them, exploring complex interactions between simple parts.
@@ -31,10 +32,10 @@
     and can control other synths over Open Sound Control or MIDI.
     </description>
   <dependencies>
-    <dependency id="Atom"/>
-    <dependency id="supercollider"/>
-    <dependency id="sc3plugins"/>
-    <dependency id="haskell-stack"/>
+    <dependency id="Atom" version="1.0.7"/>
+    <dependency id="supercollider" version="3.8.0" />
+    <dependency id="sc3plugins" version="3.8.0"/>
+    <dependency id="haskell-stack" version="1.4.0"/>
   </dependencies>
   </metadata>
   <files>
