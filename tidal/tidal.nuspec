@@ -33,9 +33,9 @@
     </description>
   <dependencies>
     <dependency id="Atom" version="1.0.7"/>
-    <dependency id="supercollider" version="3.8.0" />
+    <!--<dependency id="supercollider" version="3.8.0" />
     <dependency id="sc3plugins" version="3.8.0"/>
-    <dependency id="haskell-stack" version="1.4.0"/>
+    <dependency id="haskell-stack" version="1.4.0"/>-->
   </dependencies>
   </metadata>
   <files>
