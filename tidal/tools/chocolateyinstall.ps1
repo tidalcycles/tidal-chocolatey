@@ -13,3 +13,18 @@ $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";"
 # install tidalcycles Atom package
 Write-Host 'Installing TidalCycles Atom package.'
 apm install tidalcycles
+
+# install SuperDirt quark
+$superDirtUrl = 'https://github.com/musikinformatik/SuperDirt'
+$quarksPath = $env:LOCALAPPDATA + '\SuperCollider\downloaded-quarks'
+
+if (!(Test-Path -Path $quarksPath)){
+    Write-Host "Creating " $quarksPath
+    New-Item -ItemType directory -Path $quarksPath
+}
+
+$superDirtPath = $quarksPath + '\SuperDirt'
+
+Write-Host 'Installing SuperDirt quark.'
+git clone $superDirtUrl $superDirtPath
+
