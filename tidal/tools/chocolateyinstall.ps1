@@ -12,7 +12,7 @@ $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";"
 
 ### install tidalcycles Atom package
 Write-Host 'Installing TidalCycles Atom package.'
-# apm install tidalcycles
+apm install tidalcycles
 
 ### install SuperDirt quark
 $superDirtUrl = 'https://github.com/musikinformatik/SuperDirt'
