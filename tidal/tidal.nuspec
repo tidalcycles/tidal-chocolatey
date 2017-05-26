@@ -34,8 +34,8 @@
   <dependencies>
     <dependency id="git.install" version="[2.5.0,2.13.0]"/>
     <dependency id="atom" version="1.0.7"/>
-    <!--<dependency id="supercollider" version="3.8.0" />
-    <dependency id="sc3plugins" version="3.8.0"/> -->
+    <dependency id="supercollider" version="3.8.0" />
+    <!--<dependency id="sc3plugins" version="3.8.0"/>-->
     <dependency id="haskell-stack" version="1.4.0"/>
   </dependencies>
   </metadata>

@@ -36,15 +36,15 @@ if (!(Test-Path -Path $superDirtPath)){
 }
 
 ### install default dirt samples
-Write-Host 'Installing Dirt samples.'
-$dirtSamplesUrl = 'https://github.com/tidalcycles/dirt-samples'
-$samplesPath = $quarksPath + '\Dirt-Samples'
+# Write-Host 'Installing Dirt samples.'
+# $dirtSamplesUrl = 'https://github.com/tidalcycles/dirt-samples'
+# $samplesPath = $quarksPath + '\Dirt-Samples'
 
-if (!(Test-Path -Path $samplesPath)){
-    git clone $dirtSamplesUrl $samplesPath
-} else {
-    Write-Host 'Dirt-Samples already installed.'
-}
+# if (!(Test-Path -Path $samplesPath)){
+#     git clone $dirtSamplesUrl $samplesPath
+# } else {
+#     Write-Host 'Dirt-Samples already installed.'
+# }
 
 ### install Vowel quark
 Write-Host 'Installing Vowel quark.'
@@ -63,7 +63,7 @@ Write-Host 'stack setup'
 stack setup
 
 ### install tidal
-Write-Host 'stack install tidal'
+Write-Host 'stack install tidal-0.9.4'
 stack install tidal
 
 Write-Host 'Done.'
