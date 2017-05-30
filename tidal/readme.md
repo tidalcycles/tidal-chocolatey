@@ -1,21 +1,29 @@
 # Beta Testing
 
+If you'd like to test the TidalCycles package install on Windows, follow these instructions:
+
 1. Install Chocolatey, if you have not already:
 
 https://chocolatey.org
 
 2. Clone this repository:
 
-`git clone https://github.com/tidalcycles/tidal-chocolatey tidal-chocolatey`
+```bash
+git clone https://github.com/tidalcycles/tidal-chocolatey tidal-chocolatey
+```
 
 3. Build the TidalCycles Chocolatey package:
 
-`cd tidal-chocolate\tidal`
-`cpack`
+```bash
+cd tidal-chocolate\tidal
+cpack
+```
 
 4. Install the package:
 
-`choco install tidalcycles -s "'.;https://chocolatey.org/api/v2/'"`
+```bash
+choco install tidalcycles -s "'.;https://chocolatey.org/api/v2/'"
+```
 
 This will install:
 
@@ -35,13 +43,17 @@ This will install:
 
 7. From the SuperCollider editor, boot up SuperDirt like you normally would. Something like this:
 
-`SuperDirt.start`
+```bash
+SuperDirt.start
+```
 
 Feel free to execute an alternate boot process or load other sample paths.
 
 8. Start Atom *using a Haskell Stack context*. From a command prompt:
 
-`stack exec atom`
+```bash
+stack exec atom
+```
 
 9. Create a .tidal file in Atom and write Tidal code as you normally would. 
 
