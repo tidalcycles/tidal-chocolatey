@@ -55,5 +55,8 @@ Feel free to execute an alternate boot process or load other sample paths.
 stack exec atom
 ```
 
+You *must* start Atom in this way. If you fail to use `stack exec` to start Atom, then the TidalCycles package inside Atom will not work.
+
+
 9. Create a .tidal file in Atom and write Tidal code as you normally would. 
 
