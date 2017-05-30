@@ -15,7 +15,7 @@ git clone https://github.com/tidalcycles/tidal-chocolatey tidal-chocolatey
 3. Build the TidalCycles Chocolatey package:
 
 ```bash
-cd tidal-chocolate\tidal
+cd tidal-chocolatey\tidal
 cpack
 ```
 
