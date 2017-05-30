@@ -5,7 +5,8 @@
     <version>0.9.4</version>
     <packageSourceUrl>https://github.com/tidalcycles/tidal-chocolatey</packageSourceUrl>
     <title>TidalCycles for Windows</title>
-    <authors>Mike Hodnick</authors>
+    <owners>Mike Hodnick</owners>
+    <authors>https://tidalcycles.org/credits.html</authors>
     <projectUrl>https://tidalcycles.org</projectUrl>
     <iconUrl>https://tidalcycles.org/favicon/favicon-96x96.png</iconUrl>
     <licenseUrl>https://www.gnu.org/licenses/gpl-3.0.en.html</licenseUrl>
@@ -35,7 +36,7 @@
     <dependency id="git.install" version="[2.5.0,2.13.0]"/>
     <dependency id="atom" version="1.0.7"/>
     <dependency id="supercollider" version="3.8.0" />
-    <!--<dependency id="sc3plugins" version="3.8.0"/>-->
+    <dependency id="sc3plugins" version="3.8.0"/>
     <dependency id="haskell-stack" version="1.4.0"/>
   </dependencies>
   </metadata>
