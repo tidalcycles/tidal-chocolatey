@@ -1,4 +1,5 @@
 # tidal-chocolatey
 Chocolatey package definitions for TidalCycles and related installs.
 
-You can find the TidalCycles package at [tidal/readme.md](tidal/readme.md).
+## Beta-Testing the TidalCycles package
+Interested in testing and giving feedback? You can find instructions for testing the TidalCycles package at [tidal/readme.md](tidal/readme.md).
