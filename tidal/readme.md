@@ -1,6 +1,8 @@
 # Beta Testing
 
-If you'd like to test the TidalCycles package install on Windows, follow these instructions:
+If you'd like to test the TidalCycles package install on Windows, follow the instructions below.
+
+DISCLAIMER: test at your own risk. Testing on a clean system is recommended. The effects of installing over an existing Tidal environment are not really known yet.
 
 ### 1. Install Chocolatey, if you have not already:
 
