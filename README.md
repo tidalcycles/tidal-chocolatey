@@ -1,5 +1,5 @@
-# tidal-chocolatey
-Chocolatey package definitions for TidalCycles and related installs.
+# Chocolatey Packages for TidalCycles
+This repo hosts code for all Chocolatey package related to the TidalCycles live-coding environment.
 
-## Beta-Testing the TidalCycles package
-Interested in testing and giving feedback? You can find instructions for testing the TidalCycles package at [tidal/readme.md](tidal/readme.md).
+## TidalCycles Package
+Source code for the _TidalCycles_ core package is at [tidal/readme.md](tidal/readme.md).
