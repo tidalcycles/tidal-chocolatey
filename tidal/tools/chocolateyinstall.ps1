@@ -66,5 +66,10 @@ stack setup
 Write-Host 'stack install tidal-0.9.4'
 stack install tidal
 
+### Desktop shortcut
+$shortcutFolder = [Environment]::GetFolderPath("Desktop")
+$shortcutPath = $shortcutFolder + "\tidal.lnk"
+Install-ChocolateyShortcut -ShortcutFilePath $shortcutPath -TargetPath "stack.exe" -Arguments "exec atom"
+
 Write-Host 'Done.'
 Write-Host 'd1 $ sound "bd sn"'
