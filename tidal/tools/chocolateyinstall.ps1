@@ -6,8 +6,10 @@ $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";"
 # todo
 # - Atom tidalcycles package apm install
 # - install superdirt quark
-# - stack setup
-# - stack install tidal
+# - cabal config file modification
+# - cabal install tidal
+#       msys paths
+#       mingw paths
 # - default dirt samples ?
 
 ### install tidalcycles Atom package
@@ -57,14 +59,17 @@ if (!(Test-Path -Path $vowelPath)){
     Write-Host 'Vowel quark already installed.'
 }
 
+# do cabal config change here
 
-### setup Haskell stack
-Write-Host 'stack setup'
-stack setup
 
-### install tidal
-Write-Host 'stack install tidal-0.9.4'
-stack install tidal
+# extra-prog-path: C:\tools\msys64\usr\bin
+# extra-lib-dirs: C:\ProgramData\chocolatey\lib\ghc\tools\ghc-8.0.2\mingw\lib
+# extra-include-dirs: C:\ProgramData\chocolatey\lib\ghc\tools\ghc-8.0.2\mingw\include
+
+
+
+Write-Host "cabal install tidal"
+cabal install tidal
 
 ### Desktop shortcut
 $shortcutFolder = [Environment]::GetFolderPath("Desktop")
