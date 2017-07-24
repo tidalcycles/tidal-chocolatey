@@ -70,5 +70,24 @@ Write-Host "cabal install tidal"
 cabal update
 cabal install tidal
 
+
+### Complete SuperDirt Install Shortcut
+$shortcutFolder = [Environment]::GetFolderPath("Desktop")
+$shortcutPath = $shortcutFolder + "\Complete SuperDirt Install.lnk"
+$targetPath = $env:ChocolateyPackageFolder  + '\tools\superdirt-install.sc'
+Install-ChocolateyShortcut -ShortcutFilePath $shortcutPath -TargetPath $targetPath
+
+### Boot SuperDirt Shortcut
+$shortcutFolder = [Environment]::GetFolderPath("Desktop")
+$shortcutPath = $shortcutFolder + "\Boot SuperDirt.lnk"
+$targetPath = $env:ChocolateyPackageFolder  + '\tools\startup.sc'
+Install-ChocolateyShortcut -ShortcutFilePath $shortcutPath -TargetPath $targetPath
+
+### Boot SuperDirt Shortcut
+$shortcutFolder = [Environment]::GetFolderPath("Desktop")
+$shortcutPath = $shortcutFolder + "\Run Tidal.lnk"
+$targetPath = $env:ChocolateyPackageFolder  + '\tools\testing123.tidal'
+Install-ChocolateyShortcut -ShortcutFilePath $shortcutPath -TargetPath "atom" -Arguments $targetPath
+
 Write-Host 'Done.'
 Write-Host 'd1 $ sound "bd sn"'
