@@ -3,18 +3,9 @@
 # refresh env vars after other packages have been installed
 $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User") 
 
-# todo
-# - Atom tidalcycles package apm install
-# - install superdirt quark
-# - cabal config file modification
-# - cabal install tidal
-#       msys paths
-#       mingw paths
-# - default dirt samples ?
-
 ### install tidalcycles Atom package
 Write-Host 'Installing TidalCycles Atom package.'
-apm install tidalcycles
+# apm install tidalcycles
 
 ### ensure Quarks path
 Write-Host 'Ensuring SuperCollider Quarks path.'
@@ -59,17 +50,25 @@ if (!(Test-Path -Path $vowelPath)){
     Write-Host 'Vowel quark already installed.'
 }
 
-# do cabal config change here
+# Do cabal config changes
+$configPath = $env:APPDATA + '\cabal\config'
+$configExists = Test-Path $configPath
+$extraConfigPath = $env:ChocolateyPackageFolder  + '\tools\cabal-config.txt'
 
+# create cabal config if it does not exist
+if (!$configExists){
+    Write-Host 'cabal config file does not exist.'
+    Write-Host 'cabal user-config init'
+    cabal user-config init
+}
 
-# extra-prog-path: C:\tools\msys64\usr\bin
-# extra-lib-dirs: C:\ProgramData\chocolatey\lib\ghc\tools\ghc-8.0.2\mingw\lib
-# extra-include-dirs: C:\ProgramData\chocolatey\lib\ghc\tools\ghc-8.0.2\mingw\include
-
-
+$newSettings = Get-Content $extraConfigPath
+Write-Host 'Writing new settings to cabal config file.'
+Add-Content $configPath $newSettings
 
 Write-Host "cabal install tidal"
-#cabal install tidal
+cabal update
+cabal install tidal
 
 Write-Host 'Done.'
 Write-Host 'd1 $ sound "bd sn"'
