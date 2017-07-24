@@ -69,12 +69,7 @@ if (!(Test-Path -Path $vowelPath)){
 
 
 Write-Host "cabal install tidal"
-cabal install tidal
-
-### Desktop shortcut
-$shortcutFolder = [Environment]::GetFolderPath("Desktop")
-$shortcutPath = $shortcutFolder + "\tidal.lnk"
-Install-ChocolateyShortcut -ShortcutFilePath $shortcutPath -TargetPath "stack.exe" -Arguments "exec atom"
+#cabal install tidal
 
 Write-Host 'Done.'
 Write-Host 'd1 $ sound "bd sn"'
