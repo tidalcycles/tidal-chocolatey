@@ -50,6 +50,26 @@ if (!(Test-Path -Path $vowelPath)){
     Write-Host 'Vowel quark already installed.'
 }
 
+# modify SuperCollider sclang config file to look for these quarks
+$sclangConfigPath = $env:LOCALAPPDATA + '\SuperCollider\sclang_conf.yaml'
+$extraSclangConfigPath = $env:ChocolateyPackageFolder + '\tools\extra-sclang-config.txt'
+$first = $false
+$newContent = ""
+$newLine = [System.Environment]::NewLine
+
+foreach($line in Get-Content $sclangConfigPath) {
+    $newContent += $line + $newLine
+    if ($first -eq $false){
+        foreach($extraLine in Get-Content $extraSclangConfigPath){
+            $newContent += $extraLine + $newLine
+        }
+        $first = $true
+    }
+}
+
+Write-Host "Writing new config to sclang_conf.yaml"
+Out-File -FilePath $sclangConfigPath -InputObject $newContent
+
 # Do cabal config changes
 $configPath = $env:APPDATA + '\cabal\config'
 $configExists = Test-Path $configPath
@@ -66,28 +86,23 @@ $newSettings = Get-Content $extraConfigPath
 Write-Host 'Writing new settings to cabal config file.'
 Add-Content $configPath $newSettings
 
+# Finally, install Tidal
 Write-Host "cabal install tidal"
 cabal update
 cabal install tidal
 
 
-### Complete SuperDirt Install Shortcut
-$shortcutFolder = [Environment]::GetFolderPath("Desktop")
-$shortcutPath = $shortcutFolder + "\Complete SuperDirt Install.lnk"
-$targetPath = $env:ChocolateyPackageFolder  + '\tools\superdirt-install.sc'
-Install-ChocolateyShortcut -ShortcutFilePath $shortcutPath -TargetPath $targetPath
+### Boot SuperDirt Shortcut
+# $shortcutFolder = [Environment]::GetFolderPath("Desktop")
+# $shortcutPath = $shortcutFolder + "\Boot SuperDirt.lnk"
+# $targetPath = $env:ChocolateyPackageFolder  + '\tools\startup.sc'
+# Install-ChocolateyShortcut -ShortcutFilePath $shortcutPath -TargetPath $targetPath
 
 ### Boot SuperDirt Shortcut
-$shortcutFolder = [Environment]::GetFolderPath("Desktop")
-$shortcutPath = $shortcutFolder + "\Boot SuperDirt.lnk"
-$targetPath = $env:ChocolateyPackageFolder  + '\tools\startup.sc'
-Install-ChocolateyShortcut -ShortcutFilePath $shortcutPath -TargetPath $targetPath
-
-### Boot SuperDirt Shortcut
-$shortcutFolder = [Environment]::GetFolderPath("Desktop")
-$shortcutPath = $shortcutFolder + "\Run Tidal.lnk"
-$targetPath = $env:ChocolateyPackageFolder  + '\tools\testing123.tidal'
-Install-ChocolateyShortcut -ShortcutFilePath $shortcutPath -TargetPath "atom" -Arguments $targetPath
+# $shortcutFolder = [Environment]::GetFolderPath("Desktop")
+# $shortcutPath = $shortcutFolder + "\Run Tidal.lnk"
+# $targetPath = $env:ChocolateyPackageFolder  + '\tools\testing123.tidal'
+# Install-ChocolateyShortcut -ShortcutFilePath $shortcutPath -TargetPath "atom" -Arguments $targetPath
 
 Write-Host 'Done.'
 Write-Host 'd1 $ sound "bd sn"'
