@@ -36,13 +36,13 @@ $samplesPath = $quarksPath + '\Dirt-Samples'
 if (!(Test-Path -Path $samplesPath)){
     git clone $dirtSamplesUrl $samplesPath
 } else {
-    Write-Host 'Dirt-Samples already installed.'
+    Write-Host 'Dirt-Samples already installed. This will take a few minutes to download.'
 }
 
 ### install Vowel quark
 Write-Host 'Installing Vowel quark.'
 $vowelQuarkUrl = 'https://github.com/supercollider-quarks/Vowel'
-$vowelPath = $quarksPath = '\Vowel'
+$vowelPath = $quarksPath + '\Vowel'
 
 if (!(Test-Path -Path $vowelPath)){
     git clone $vowelQuarkUrl $vowelPath
@@ -52,20 +52,9 @@ if (!(Test-Path -Path $vowelPath)){
 
 # modify SuperCollider sclang config file to look for these quarks
 $sclangConfigPath = $env:LOCALAPPDATA + '\SuperCollider\sclang_conf.yaml'
-$extraSclangConfigPath = $env:ChocolateyPackageFolder + '\tools\extra-sclang-config.txt'
-$first = $false
-$newContent = ""
-$newLine = [System.Environment]::NewLine
-
-foreach($line in Get-Content $sclangConfigPath) {
-    $newContent += $line + $newLine
-    if ($first -eq $false){
-        foreach($extraLine in Get-Content $extraSclangConfigPath){
-            $newContent += $extraLine + $newLine
-        }
-        $first = $true
-    }
-}
+$newSclangConfigPath = $env:ChocolateyPackageFolder + '\tools\sclang_conf.yaml'
+$newContent = Get-Content $newSclangConfigPath
+$newContent = $newContent -replace "<username>", $env:UserName
 
 Write-Host "Writing new config to sclang_conf.yaml"
 Out-File -FilePath $sclangConfigPath -InputObject $newContent
