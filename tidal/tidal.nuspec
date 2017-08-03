@@ -3,7 +3,7 @@
   <metadata>
     <id>TidalCycles</id>
     <version>0.9.4</version>
-    <packageSourceUrl>https://github.com/tidalcycles/tidal-chocolatey</packageSourceUrl>
+    <packageSourceUrl>https://github.com/tidalcycles/tidal-chocolatey/tidal</packageSourceUrl>
     <title>TidalCycles for Windows</title>
     <owners>Mike Hodnick</owners>
     <authors>https://tidalcycles.org/credits.html</authors>
