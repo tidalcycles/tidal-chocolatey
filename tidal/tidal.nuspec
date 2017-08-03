@@ -15,7 +15,7 @@
     <docsUrl>http://tidalcycles.org/</docsUrl>
     <bugTrackerUrl>https://github.com/tidalcycles/tidal/issues</bugTrackerUrl>
     <releaseNotes>https://github.com/tidalcycles/tidal-chocolatey/blob/master/tidal/changelog.md</releaseNotes>
-    <tags>tidal tidalcycles livecoding admin audio</tags>
+    <tags>tidal tidalcycles livecoding audio</tags>
     <summary>TidalCycles install for Windows.</summary>    
     <description>TidalCycles (or Tidal for short) is a language for live coding patterns.
     It allows you to make musical patterns with text, describing sequences and ways of 
