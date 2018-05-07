@@ -78,7 +78,7 @@ Add-Content $configPath $newSettings
 # Finally, install Tidal
 Write-Host "cabal install tidal"
 cabal update
-cabal install tidal-0.9.4
+cabal install tidal-0.9.9
 
 Write-Host 'Done.'
 Write-Host 'd1 $ sound "bd sn"'

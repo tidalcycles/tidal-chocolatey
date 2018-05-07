@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>TidalCycles</id>
-    <version>0.9.4</version>
+    <version>0.9.9</version>
     <packageSourceUrl>https://github.com/tidalcycles/tidal-chocolatey/tidal</packageSourceUrl>
     <title>TidalCycles for Windows</title>
     <owners>Mike Hodnick</owners>
