@@ -59,22 +59,6 @@ $newContent = $newContent -replace "<username>", $env:UserName
 Write-Host "Writing new config to sclang_conf.yaml"
 Out-File -FilePath $sclangConfigPath -InputObject $newContent
 
-# Do cabal config changes
-$configPath = $env:APPDATA + '\cabal\config'
-$configExists = Test-Path $configPath
-$extraConfigPath = $env:ChocolateyPackageFolder  + '\tools\cabal-config.txt'
-
-# create cabal config if it does not exist
-if (!$configExists){
-    Write-Host 'cabal config file does not exist.'
-    Write-Host 'cabal user-config init'
-    cabal user-config init
-}
-
-$newSettings = Get-Content $extraConfigPath
-Write-Host 'Writing new settings to cabal config file.'
-Add-Content $configPath $newSettings
-
 # Finally, install Tidal
 Write-Host "cabal install tidal"
 cabal update
