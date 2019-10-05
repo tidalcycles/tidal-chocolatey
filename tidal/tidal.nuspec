@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>TidalCycles</id>
-    <version>0.9.9</version>
+    <version>1.4.3</version>
     <packageSourceUrl>https://github.com/tidalcycles/tidal-chocolatey/tidal</packageSourceUrl>
     <title>TidalCycles for Windows</title>
     <owners>Mike Hodnick</owners>
@@ -34,7 +34,7 @@
     </description>
   <dependencies>
     <dependency id="git" version="2.23.0"/>
-    <dependency id="atom" version="1.41.0-beta1"/>
+    <dependency id="atom" version="1.39.1"/>
     <dependency id="supercollider" version="3.9.3.0" />
     <dependency id="sc3plugins" version="3.9.0"/>
     <dependency id="msys2" version="20180531.0.0" />
