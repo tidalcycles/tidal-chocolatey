@@ -9,13 +9,13 @@ apm install tidalcycles
 
 ### install SuperDirt
 $quarkinstall_path = $env:ChocolateyPackageFolder + '\tools\quarkinstall.sc'
-Write-Host 'Installing SuperDirt sound synth and sample library. This will probably take a long time.
+Write-Host 'Installing SuperDirt sound synth and sample library. This will probably take a long time.'
 sclang $quarkinstall_path
 
 # Finally, install Tidal
 Write-Host "Installing tidal library. This will also take a long time." 
 cabal v2-update
-cabal v2-install tidal --lib
+cabal v2-install tidal-1.4.3 --lib
 
 Write-Host 'Done.'
 Write-Host 'd1 $ sound "bd sn"'
