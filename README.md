@@ -5,7 +5,7 @@ This repo hosts code for all Chocolatey package related to the TidalCycles live-
 
 Make sure you have Chocolatey installed. See https://chocolatey.org for more information.
 
-1. Run Windows PowerShell with admin privledges, and then execute this command:
+1. Run Windows PowerShell with admin privileges (which you can find by holding down the windows key and pressing x), and then execute this command:
 
 ```bash
 choco install tidalcycles
