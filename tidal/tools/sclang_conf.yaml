@@ -1,7 +1,0 @@
-includePaths:
-    - C:\Users\<username>\AppData\Local\SuperCollider\downloaded-quarks\Vowel
-    - C:\Users\<username>\AppData\Local\SuperCollider\downloaded-quarks\Dirt-Samples
-    - C:\Users\<username>\AppData\Local\SuperCollider\downloaded-quarks\SuperDirt
-excludePaths:
-    []
-postInlineWarnings: false
