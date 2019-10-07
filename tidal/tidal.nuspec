@@ -5,7 +5,7 @@
     <version>1.4.3</version>
     <packageSourceUrl>https://github.com/tidalcycles/tidal-chocolatey/tidal</packageSourceUrl>
     <title>TidalCycles for Windows</title>
-    <owners>Mike Hodnick</owners>
+    <owners>Mike Hodnick, Alex McLean</owners>
     <authors>https://tidalcycles.org/credits.html</authors>
     <projectUrl>https://tidalcycles.org</projectUrl>
     <iconUrl>https://tidalcycles.org/favicon/favicon-96x96.png</iconUrl>
