@@ -3,7 +3,7 @@
 # refresh env vars after other packages have been installed
 
 $scpath = Join-Path $env:programfiles "SuperCollider-3.9.3"
-$apmpath = Join-Path $env:localappdata "\atom\app-1.39.1\resources\app\apm\bin"
+$apmpath = Join-Path $env:localappdata "atom\bin"
 $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User") + ";" + $scpath + ";" + $apmpath
 
 ### install tidalcycles Atom package
