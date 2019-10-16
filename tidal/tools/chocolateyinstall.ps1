@@ -7,8 +7,11 @@ $apmpath = Join-Path $env:localappdata "atom\bin"
 $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User") + ";" + $scpath + ";" + $apmpath
 
 ### install tidalcycles Atom package
-Write-Host 'Installing TidalCycles Atom package.'
+Write-Host 'Installing TidalCycles Atom package (using apm in $apmpath).'
 apm install tidalcycles
+
+get-childitem $env:localappdata
+get-childitem $apmpath
 
 ### install SuperDirt
 $quarkinstall_path = $env:ChocolateyPackageFolder + '\tools\quarkinstall.sc'
