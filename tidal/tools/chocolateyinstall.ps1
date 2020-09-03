@@ -21,7 +21,7 @@ sclang $quarkinstall_path
 # Finally, install Tidal
 Write-Host "Installing tidal library. This will also take a long time." 
 cabal v1-update
-cabal v1-install tidal-1.4.3
+cabal v1-install tidal
 
 Write-Host 'Done.'
 Write-Host 'd1 $ sound "bd sn"'
