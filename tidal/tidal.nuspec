@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>TidalCycles</id>
-    <version>1.6.1</version>
+    <version>1.7.8</version>
     <packageSourceUrl>https://github.com/tidalcycles/tidal-chocolatey/</packageSourceUrl>
     <title>TidalCycles for Windows</title>
     <owners>Mike Hodnick, Alex McLean</owners>
@@ -33,12 +33,13 @@
     and can control other synths over Open Sound Control or MIDI.
     </description>
   <dependencies>
-    <dependency id="git" version="2.23.0"/>
-    <dependency id="atom" version="1.39.1"/>
-    <dependency id="supercollider" version="3.9.3.0" />
-    <dependency id="sc3plugins" version="3.9.0"/>
-    <dependency id="msys2" version="20180531.0.0" />
-    <dependency id="ghc" version="8.8.1"/>
+    <dependency id="git" version="2.33.1"/>
+    <dependency id="atom" version="1.58.0"/>
+    <dependency id="supercollider" version="3.12.1.0" />
+    <dependency id="sc3plugins" version="3.11.1"/>
+    <dependency id="msys2" version="20210604.0.0" />
+    <dependency id="cabal" version="3.6.2.0"/>
+    <dependency id="ghc" version="8.10.7"/>
   </dependencies>
   </metadata>
   <files>

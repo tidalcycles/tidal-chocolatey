@@ -2,7 +2,7 @@
 
 # refresh env vars after other packages have been installed
 
-$scpath = Join-Path $env:programfiles "SuperCollider-3.9.3"
+$scpath = Join-Path $env:programfiles "SuperCollider-3.12.1"
 $apmpath = Join-Path $env:localappdata "atom\bin"
 $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User") + ";" + $scpath + ";" + $apmpath
 
@@ -20,7 +20,7 @@ sclang $quarkinstall_path
 
 # Finally, install Tidal
 Write-Host "Installing tidal library. This will also take a long time." 
-cabal v1-update
+cabal update
 cabal v1-install tidal
 
 Write-Host 'Done.'
