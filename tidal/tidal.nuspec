@@ -37,9 +37,9 @@
     <dependency id="atom" version="1.58.0"/>
     <dependency id="supercollider" version="3.12.1.0" />
     <dependency id="sc3plugins" version="3.11.1"/>
-    <dependency id="msys2" version="20210604.0.0" />
-    <dependency id="cabal" version="3.6.2.0"/>
-    <dependency id="ghc" version="8.10.7"/>
+    <dependency id="msys2" version="[20210604.0.0]" />
+    <dependency id="cabal" version="[3.6.2.0]"/>
+    <dependency id="ghc" version="[8.10.7]"/>
   </dependencies>
   </metadata>
   <files>
