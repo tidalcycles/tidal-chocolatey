@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>TidalCycles</id>
-    <version>1.7.8</version>
+    <version>1.9.2</version>
     <packageSourceUrl>https://github.com/tidalcycles/tidal-chocolatey/</packageSourceUrl>
     <title>TidalCycles for Windows</title>
     <owners>Mike Hodnick, Alex McLean</owners>
@@ -39,7 +39,7 @@
     <dependency id="sc3plugins" version="3.11.1"/>
     <dependency id="msys2" version="[20210604.0.0]" />
     <dependency id="cabal" version="[3.6.2.0]"/>
-    <dependency id="ghc" version="[8.10.7]"/>
+    <dependency id="ghc" version="[9.4.2]"/>
   </dependencies>
   </metadata>
   <files>
