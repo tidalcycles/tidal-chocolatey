@@ -26,7 +26,7 @@ cabal v1-install tidal
 # NOTE: can be removed once pulsar is available in chocolatey
 $wc = New-Object System.Net.WebClient
 $pulsarUrl = "https://download.pulsar-edit.dev/?os=windows&type=windows_setup"
-$downloadPath = "env:HOMEPATH\Downloads\pulsarInstall.exe"
+$downloadPath = Join-Path $env:HOMEPATH "Downloads\pulsarInstall.exe"
 Write-Host "Downloading Pulsar to $downloadPath"
 $wc.DownloadFile($pulsarUrl, $downloadPath)
 
