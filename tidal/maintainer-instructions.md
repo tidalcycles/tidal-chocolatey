@@ -5,7 +5,7 @@
 
 ## Overview
 Maintenance of the Chocolatey TidalCycles package includes any changes needed to a current package version and adding new versions.
-It also includes coordinating any work needed to update the packate dependencies. Making changes to a package includes updating the files in this repo as needed, then running the `choco` commands to create a package, test/validate the package, and push it up to the chocolatey environment. Typically, the choco commands are run from a local Windows environment - a VM is really handy as validation may need to be run multiple times. It may be possible to do this from Linux or MacOS. 
+It also includes coordinating any work needed to update the packate dependencies. Making changes to a package includes updating the files in this repo as needed, clone the repo to your Windows env, run the `choco` commands to create a package, test/validate the package, and push it up to the chocolatey environment. Typically, the choco commands are run from a local Windows environment - a VM is really handy as validation may need to be run multiple times. It may be possible to do this from Linux or MacOS. 
 
 Documentation: https://docs.chocolatey.org/en-us/create/
 - see the Quick Guide, but note that some important command line details and options are not covered
@@ -16,7 +16,7 @@ This is a required configuration file. To update, change the version # and any o
   - version: The dependency list includes version numbers. The version has to be a version that is available in Chocolatey, which may not be the latest. For example: SuperCollider 3.12.1 is listed even though it is several years old, because it is what is available as a package in choco. 
 
 2. tools/chocolateyinstall.ps1
-This powershell script is run **after** all of the dependencies packages are installed - each of which will have its own powershell commands. The main purpose of the script is to do any final install or configuration tasks that are not accomplished by the dependency package. 
+This powershell script is run **after** all of the dependencies packages are installed - each of which will have its own powershell commands. The main purpose of the script is to do any final install or configuration tasks that are not accomplished by the dependency package. Steps:
   - run the tools/quarkinstall.sc file from `sclang` to install SuperDirt, Dirt-Samples, and Vowel quark
   - install Tidal with`cabal` commands
   - install Pulsar and run the apm command to get the TidalCycles package for Pulsar
