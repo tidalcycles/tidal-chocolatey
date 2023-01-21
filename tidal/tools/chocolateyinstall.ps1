@@ -4,13 +4,12 @@
 #   then load machine and user path values 
 
 $scPath = Join-Path $env:programfiles "SuperCollider-3.12.1"
-$apmPath = Join-Path $env:localappdata "Programs\Pulsar\app\ppm\bin"
+$apmPath = Join-Path $env:localappdata "Programs\Pulsar\Resources\app\ppm\bin"
 $pulsarPath = "$env:localappdata\Programs\Pulsar"
 $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User") + ";" + $scPath + ";" + $apmPath + ";" + $pulsarPath
 
 ### install SuperDirt
-#$quarkinstall_path = $env:ChocolateyPackageFolder + '\tools\quarkinstall.sc'
-$quarkinstall_path = $env:programdata + '\chocolatey\tools\quarkinstall.sc'
+$quarkinstall_path = $env:ChocolateyPackageFolder + '\tools\quarkinstall.sc'
 Write-Host 'Installing SuperDirt sound synth and sample library. This may take time.'
 cd $scpath
 .\sclang $quarkinstall_path
@@ -40,7 +39,7 @@ Write-Host "Review the Chocolatey log file for details on errors: C:\ProgramData
 Write-Host "If SuperDirt or other Quarks didn't install properly, you can easily install them in the SuperCollider IDE."
 Write-Host "See User Docs install page for details."
 
-Write-Host "If there were problems with the Pulsar install, you may need to manually install."
+Write-Host "If there were problems with the Pulsar or Pulsar plugin install, you may need to manually install."
 Write-Host "Please see: http://tidalcycles.org/docs/getting-started/editor/Pulsar"
 Write-Host "Get started tidaling:"
 Write-Host 'd1 $ sound "bd [hh hh] sn cr"'
