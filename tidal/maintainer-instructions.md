@@ -1,5 +1,5 @@
-Purpose: Provide instructions and explanation for how to make updates to the TidalCycles Chocolatey Package. 
-Pre-requisite: You must be a "maintainer" of the TidalCycles package in Chocolatey. 
+*Purpose:* Provide instructions and explanation for how to make updates to the TidalCycles Chocolatey Package.  
+*Pre-requisite:* You must be a "maintainer" of the TidalCycles package in Chocolatey. 
   - register for a Chocolatey online account
   - any of the existing maintainers can add you as maintainer
 
