@@ -1,7 +1,7 @@
 # Chocolatey Packages for TidalCycles
 This repo hosts code for all Chocolatey package related to the TidalCycles live-coding environment.
 
-## TidalCycles Installation
+## TidalCycles Installation (for new users)
 
 Make sure you have Chocolatey installed. See https://chocolatey.org for more information.
 
@@ -11,16 +11,18 @@ Make sure you have Chocolatey installed. See https://chocolatey.org for more inf
 choco install tidalcycles
 ```
 
-2. Start SuperCollider
+2. Review output and check logs for any errors. Some install steps may have failed or remain in complete. 
 
-3. Start SuperDirt:
+3. Start SuperCollider
+
+4. Start SuperDirt:
 
 ```
-// type and put your cursor on this code, then Shift+Enter
+// Within the SuperCollider IDE, type and put your cursor on this code, then Shift+Enter
 SuperDirt.start
 ```
 
-4. Start Atom (Start Button -> Atom)
+4. Start Pulsar (Start Button -> Pulsar)
 
 6. Write Tidal code!
 
