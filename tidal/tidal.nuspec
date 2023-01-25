@@ -8,7 +8,7 @@
     <owners>Mike Hodnick, Alex McLean</owners>
     <authors>https://tidalcycles.org/credits.html</authors>
     <projectUrl>https://tidalcycles.org</projectUrl>
-    <iconUrl>https://tidalcycles.org/favicon/favicon-96x96.png</iconUrl>
+    <iconUrl>https://tidalcycles.org/img/tidal.png</iconUrl>
     <licenseUrl>https://www.gnu.org/licenses/gpl-3.0.en.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/tidalcycles/tidal</projectSourceUrl>
