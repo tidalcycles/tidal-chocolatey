@@ -9,7 +9,8 @@ $pulsarPath = "$env:localappdata\Programs\Pulsar"
 $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User") + ";" + $scPath + ";" + $apmPath + ";" + $pulsarPath
 
 ### install SuperDirt
-$quarkinstall_path = $env:ChocolateyPackageFolder + '\tools\quarkinstall.sc'
+$ChocolateyPackagePath = Get-ChocolateyPath -PathType 'PackagePath'
+$quarkinstall_path = $ChocolateyPackagePath + '\tools\quarkinstall.sc'
 Write-Host 'Installing SuperDirt sound synth and sample library. This may take time.'
 cd $scpath
 .\sclang $quarkinstall_path
