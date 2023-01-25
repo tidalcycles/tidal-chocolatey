@@ -53,10 +53,17 @@ choco install TidalCycles.1.9.3.nupkg --source "'.;https://community.chocolatey.
 ```
 
 5. Push to Chocolatey
-  - API key - available on your Account page
+  - API key - available on your Account page (only required the first time you push)
   - Push
 
 ```powershell
 choco apikey --api-key [YOUR API_KEY_HERE] -source https://push.chocolatey.org/
 choco push <TidalCycles>.nupkg --source https://push.chocolatey.org/
 ```
+
+6. Resolve any Validation issues    
+  - Chocolatey will generate email messages with status. If there are any validation automation errors, you need to resolve them and re-submit (`choco pack` and `choco push`). 
+  - Validation is not immediate - it appears to be a batch process.
+  - Follow all directions carefully - the emails are dense and it is tempting to skip over important details. 
+  - Getting an admin to intervene or provide help ... "No human moderators see packages until automated checks are passed or the maintainer uses the review comments box to respond."
+
