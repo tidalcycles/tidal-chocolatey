@@ -28,8 +28,8 @@ cabal v1-install tidal
 ##    -Wait option insures that script will wait for install process to complete
 
 $wc = New-Object System.Net.WebClient
-$pulsarUrl = "https://github.com/pulsar-edit/pulsar/releases/download/v1.101.0-beta/Windows.Pulsar.Setup.1.101.0-beta.exe"
-#$pulsarUrl = "https://download.pulsar-edit.dev/?os=windows&type=windows_setup"
+#$pulsarUrl = "https://github.com/pulsar-edit/pulsar/releases/download/v1.101.0-beta/Windows.Pulsar.Setup.1.101.0-beta.exe"
+$pulsarUrl = "https://download.pulsar-edit.dev/?os=windows&type=windows_setup"
 
 $downloadPath = Join-Path $env:HOMEPATH "Downloads\pulsar-1.101.0-Install.exe"
 Write-Host "Downloading Pulsar to $downloadPath"
