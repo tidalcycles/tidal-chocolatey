@@ -17,24 +17,25 @@ This is a required configuration file. To update, change the version # and any o
   - see [Microsoft NuGet Package Version](https://learn.microsoft.com/en-us/nuget/concepts/package-versioning#Specifying-Version-Ranges-in-.nuspec-Files) specification. Note the detail on Version Range syntax. 
 
 2. tools/chocolateyinstall.ps1
-This powershell script is run **after** all of the dependencies packages are installed - choco will manage each of them with powershell commands. The main purpose of this script is to do any final install or configuration tasks that are not accomplished by the dependency package.  
-
-Steps:
+This powershell script is run **after** all of the dependencies packages are installed - choco will manage each of them with powershell commands. The main purpose of this script is to do any final install or configuration tasks that are not accomplished by the dependency package. Tasks in this script:
   - run the tools/quarkinstall.sc file from `sclang` to install SuperDirt, Dirt-Samples, and Vowel quark
   - install Tidal with`cabal` commands
   - download Pulsar installer, run the installer, and run the apm command to get the TidalCycles package for Pulsar
   - manage additional environment variables needed for the install and post install
-  - Provide instructions back to the user
+  - Provide instructions back to the user (note these may not get to the user if there is a script failure, depending on where it fails)
 
 3. tools/quarkinstall.sc
 Contains the commands run by SuperCollider (sclang) to install SuperDirt and quarks.
 
 ## Details - Package creation
 Quick Start Guide: https://docs.chocolatey.org/en-us/create/create-packages-quick-start
+
+Below are the steps needed to create a new version of the Tidalcycles chocolatey package:
 From Windows Powershell (with choco and git installed):
-1. Clone this repo
-2. In Powershell, `cd` to the tidal directory - where `tidal.nuspec` is located.
-3. create a choco package file (.nupkg):
+1. create a choco build dir (name it whatever); cd to it
+2. Clone this repo
+3. In Powershell, `cd` to the tidal directory where `tidal.nuspec` is located.
+4. create a choco package file (.nupkg):
 
 ```powershell
 choco pack
@@ -66,4 +67,5 @@ choco push <TidalCycles>.nupkg --source https://push.chocolatey.org/
   - Validation is not immediate - it appears to be a batch process.
   - Follow all directions carefully - the emails are dense and it is tempting to skip over important details. 
   - Getting an admin to intervene or provide help ... "No human moderators see packages until automated checks are passed or the maintainer uses the review comments box to respond."
+  - New releases in choco require human admin approval after all the validation steps are complete. These can take several days, depending...
 
