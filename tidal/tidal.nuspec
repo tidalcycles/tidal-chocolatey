@@ -12,7 +12,7 @@
     <licenseUrl>https://www.gnu.org/licenses/gpl-3.0.en.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/tidalcycles/tidal</projectSourceUrl>
-    <docsUrl>http://tidalcycles.org/</docsUrl>
+    <docsUrl>http://tidalcycles.org/docs</docsUrl>
     <bugTrackerUrl>https://github.com/tidalcycles/tidal/issues</bugTrackerUrl>
     <releaseNotes>https://github.com/tidalcycles/tidal-chocolatey/blob/master/tidal/changelog.md</releaseNotes>
     <tags>tidal tidalcycles livecoding audio</tags>
