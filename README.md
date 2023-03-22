@@ -30,3 +30,10 @@ SuperDirt.start
 -- type and put your cursor on this code, then Shift+Enter
 d1 $ sound "bd sn"
 ```
+
+---
+# Contents of this repository
+
+- tidal: contains files used by the TidalCycles package in Chocolatey
+- tidal > maintainer-instructions.md: details on how to manage and update the package
+
