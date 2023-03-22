@@ -5,11 +5,11 @@
     <version>1.9.4</version>
     <packageSourceUrl>https://github.com/tidalcycles/tidal-chocolatey/</packageSourceUrl>
     <title>TidalCycles for Windows</title>
-    <owners>Mike Hodnick, Alex McLean</owners>
-    <authors>https://tidalcycles.org/credits.html</authors>
+    <owners>Alex McLean</owners>
+    <authors>Alex McLean</authors>
     <projectUrl>https://tidalcycles.org</projectUrl>
     <iconUrl>https://tidalcycles.org/img/tidal.png</iconUrl>
-    <licenseUrl>https://www.gnu.org/licenses/gpl-3.0.en.html</licenseUrl>
+    <licenseUrl>https://github.com/tidalcycles/Tidal/blob/main/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/tidalcycles/tidal</projectSourceUrl>
     <docsUrl>http://tidalcycles.org/docs</docsUrl>
