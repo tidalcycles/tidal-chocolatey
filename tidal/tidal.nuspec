@@ -36,7 +36,7 @@
     <dependency id="git" version="2.33.1"/>
     <dependency id="supercollider" version="3.12.1.0" />
     <dependency id="sc3plugins" version="3.11.1"/>
-    <dependency id="msys2" version="[20210604.0.0]" />
+    <dependency id="msys2" version="[20220319.0.0]" />
     <dependency id="cabal" version="[3.6.2.0]"/>
     <dependency id="ghc" version="[9.4.2]"/>
   </dependencies>
