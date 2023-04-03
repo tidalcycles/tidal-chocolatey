@@ -1,9 +1,10 @@
 # Change Log
 
-## 1.9.4c
+## 1.9.4
 - set dependencies to exact versions with [] for ghc, cabal, msys2 in tidal.nuspec
 - changed download link for pulsar installer in powershell
-- changed version to 1.9.4c - cabal commands will install latest, and "c" is added to identify this as a "choco" install in windows
+- changed version to 1.9.4 
+- NOTE: 1.9.4 was rejected by the Moderators. The requirement is that Pulsar and SuperDirt be split out as separate packages. 
 
 ## 1.9.3
 - Removed Atom, added Pulsar via download (no Pulsar package in Chocolatey yet)
