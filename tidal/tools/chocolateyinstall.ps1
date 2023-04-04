@@ -3,12 +3,13 @@
 # write new paths for SuperCollider, Pulsar and Pulsar apm 
 #   then load machine and user path values 
 
-$scPath = Join-Path $env:programfiles "SuperCollider-3.12.1"
+$scPath = Get-AppInstallLocation SuperCollider
 $apmPath = Join-Path $env:localappdata "Programs\Pulsar\Resources\app\ppm\bin"
 $pulsarPath = "$env:localappdata\Programs\Pulsar"
 $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User") + ";" + $scPath + ";" + $apmPath + ";" + $pulsarPath
 
 ### install SuperDirt
+Write-Host "Supercollider path: " $scPath
 $ChocolateyPackagePath = Get-ChocolateyPath -PathType 'PackagePath'
 $quarkinstall_path = $ChocolateyPackagePath + '\tools\quarkinstall.sc'
 Write-Host 'Installing SuperDirt sound synth and sample library. This may take time.'
