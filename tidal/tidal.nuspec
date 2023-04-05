@@ -40,6 +40,7 @@
     <dependency id="msys2" version="[20221216.0.0]" />
     <dependency id="cabal" version="[3.8.1.0]"/>
     <dependency id="ghc" version="[9.4.4]"/>
+    <dependency id="pulsar" version="1.103.0"/>
   </dependencies>
   </metadata>
   <files>
