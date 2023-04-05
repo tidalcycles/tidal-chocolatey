@@ -33,6 +33,7 @@
     and can control other synths over Open Sound Control or MIDI.
     </description>
   <dependencies>
+    <dependency id="chocolatey-core.extension"/>
     <dependency id="git" version="2.33.1"/>
     <dependency id="supercollider" version="3.12.1.0" />
     <dependency id="sc3plugins" version="3.11.1"/>
