@@ -17,5 +17,5 @@ Write-Host "path: " $pulsarPath
 
 Write-Host "If there were problems with the Pulsar plugin install, you may need to manually install."
 Write-Host "See: http://tidalcycles.org/docs/getting-started/editor/Pulsar `n"
-Write-Host "Get started Tidaling:"
-Write-Host 'd1 $ sound "bd [hh hh] sn cr" '
+Write-Host "Review the Start Tidal page for instructions to create a SuperDirt startup file and start Tidal. `n"
+Write-Host "See: https://tidalcycles.org/docs/getting-started/tidal_start `n" 
