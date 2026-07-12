@@ -13,7 +13,7 @@ cabal v1-install tidal
 cd $apmpath
 Write-Host "Installing TidalCycles package"
 Write-Host "path: " $pulsarPath
-.\apm.cmd install tidalcycles
+.\ppm.cmd install tidalcycles
 
 Write-Host "If there were problems with the Pulsar plugin install, you may need to manually install."
 Write-Host "See: http://tidalcycles.org/docs/getting-started/editor/Pulsar `n"
